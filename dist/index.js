@@ -1,9 +1,7 @@
-// console.log(process.argv);
 const [min, max] = process.argv.slice(2);
-// Number(min, max);
 const a = Number(min);
 const b = Number(max);
-if ((a % a == 0) && (a > 0)) {
+if (isFinite(a) && isFinite(b)) {
     for (let i = a; i <= b; i++) {
         if (isPrime(i)) {
             console.log(i);
