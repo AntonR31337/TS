@@ -1,23 +1,10 @@
-const [min, max] = process.argv.slice(2);
+import { Book } from "./Books";
+import { Author } from "./author";
 
-const a = Number(min);
-const b = Number(max);
-
-if (isFinite(a) && isFinite(b)){
-    for (let i = a; i <= b; i++ ) {
-        if (isPrime(i)) {
-            console.log(i);
-        }
-    };
-} else {
-    console.log("Вы ввели неверное число");
+const aBook: Book = {
+    title: "Война и Мир",
+    author: "Толстой Л.Н.",
+    price: 1000
 }
 
-function isPrime(num: number): boolean {
-    for ( let i = 2, max = Math.sqrt(num); i <= max; i++) {
-        if (num % i === 0) {
-            return false;
-        }
-    }
-    return num > 1
-};
+console.log(aBook);
